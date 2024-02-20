@@ -23,12 +23,12 @@ x_values = data[:, 0]
 y_values = data[:, 1]
 
 # Create a discrete stem plot for the entire function
-plt.stem(x_values, y_values, linefmt='-', markerfmt='o', basefmt='', label='Sum of GP')
+plt.stem(x_values, y_values, linefmt='-', markerfmt='o', basefmt='', label='Simulation')
 
 # Highlight the 8th term with a red dot and annotation
-plt.scatter([highlighted_x], [highlighted_y], color='red', label='8th term', marker='o', s=100, zorder=3)
+plt.scatter([highlighted_x], [highlighted_y], color='blue', label='8th term', marker='o', s=100, zorder=3)
 plt.annotate(f'Sum={highlighted_y}', xy=(highlighted_x, highlighted_y), xytext=(highlighted_x - 0.5 , highlighted_y - 50))
-
+plt.scatter(x_values, y_values, color='red', marker='x', zorder=3 , label='Theory')
 # Add labels and title
 plt.xlabel('Term Number (n)')
 plt.ylabel('Sum')
